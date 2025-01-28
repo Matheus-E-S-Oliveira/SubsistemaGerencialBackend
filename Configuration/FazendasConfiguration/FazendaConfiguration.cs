@@ -20,10 +20,6 @@ namespace SubsistemaGerencialBackend.Configuration.FazendasConfiguration
                 .HasMaxLength(50)
                 .IsRequired();
 
-            builder.Property(t => t.CodigoObjetoFazenda)
-                .HasMaxLength(50)
-                .IsRequired();
-
             builder.Property(t => t.DataCriacaoFazenda)
                 .IsRequired();
 
@@ -45,6 +41,11 @@ namespace SubsistemaGerencialBackend.Configuration.FazendasConfiguration
             builder.HasMany(t => t.EnderecoFazendas)
                 .WithOne(t => t.Fazenda)
                 .HasForeignKey(t => t.FazendaId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(t => t.ClienteContrato)
+                .WithOne(t => t.Fazenda)
+                .HasForeignKey (t => t.FazendaId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

@@ -33,6 +33,10 @@ namespace SubsistemaGerencialBackend.Configuration.ClienteContratosConfiguration
                 .HasConversion<int?>()
                 .IsRequired();
 
+            builder.Property(t => t.CodigoObjetoFazenda)
+                .HasMaxLength(50)
+                .IsRequired();
+
             builder.Property(c => c.DataCriacao)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP(6)")
                 .IsRequired();

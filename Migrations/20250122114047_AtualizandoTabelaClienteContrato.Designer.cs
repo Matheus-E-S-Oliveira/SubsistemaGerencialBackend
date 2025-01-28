@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SubsistemaGerencialBackend.AppDbContexts;
 
@@ -11,9 +12,11 @@ using SubsistemaGerencialBackend.AppDbContexts;
 namespace SubsistemaGerencialBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250122114047_AtualizandoTabelaClienteContrato")]
+    partial class AtualizandoTabelaClienteContrato
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -155,17 +158,12 @@ namespace SubsistemaGerencialBackend.Migrations
                     b.Property<DateTime?>("DataInicopagamento")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<Guid>("FazendaId")
-                        .HasColumnType("char(36)");
-
                     b.Property<int>("Situacao")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
-
-                    b.HasIndex("FazendaId");
 
                     b.ToTable("ClienteContratos");
                 });
@@ -495,15 +493,7 @@ namespace SubsistemaGerencialBackend.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SubsistemaGerencialBackend.Models.Fazendas.Fazenda", "Fazenda")
-                        .WithMany("ClienteContrato")
-                        .HasForeignKey("FazendaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Cliente");
-
-                    b.Navigation("Fazenda");
                 });
 
             modelBuilder.Entity("SubsistemaGerencialBackend.Models.DeatlhesPagamentos.DetalhesPagamento", b =>
@@ -579,8 +569,6 @@ namespace SubsistemaGerencialBackend.Migrations
 
             modelBuilder.Entity("SubsistemaGerencialBackend.Models.Fazendas.Fazenda", b =>
                 {
-                    b.Navigation("ClienteContrato");
-
                     b.Navigation("EnderecoFazendas");
                 });
 

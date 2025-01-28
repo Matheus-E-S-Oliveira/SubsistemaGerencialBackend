@@ -41,4 +41,34 @@ namespace SubsistemaGerencialBackend.Models.Clientes
 
         public virtual ICollection<Licenca>? Licenca { get; set; }
     }
+
+    public class ClienteDto
+    {
+        public Guid Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public string? Cpf { get; set; } = string.Empty;
+        public SituacaoCliente Situacao { get; set; }
+        public string? Email { get; set; } = string.Empty;
+        public string? Telefone { get; set; } = string.Empty;
+    }
+
+    public class ClienteComEnderecoDto
+    {
+        public Guid Id { get; set; }
+
+        public string Nome { get; set; } = string.Empty;
+
+        public string? Cpf { get; set; } = string.Empty;
+
+        public SituacaoCliente Situacao { get; set; }
+
+        public string? Email { get; set; } = string.Empty;
+
+        public string? Telefone { get; set; } = string.Empty;
+
+        public List<EnderecoClienteDto> Enderecos { get; set; } = new List<EnderecoClienteDto>();
+
+        public List<FazendaDto> Fazendas { get; set; } = new List<FazendaDto>();
+
+    }
 }

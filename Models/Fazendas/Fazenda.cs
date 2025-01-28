@@ -1,4 +1,5 @@
-﻿using SubsistemaGerencialBackend.Models.Clientes;
+﻿using SubsistemaGerencialBackend.Models.ClienteContratos;
+using SubsistemaGerencialBackend.Models.Clientes;
 using SubsistemaGerencialBackend.Models.EnderecoFazendas;
 
 namespace SubsistemaGerencialBackend.Models.Fazendas
@@ -7,14 +8,12 @@ namespace SubsistemaGerencialBackend.Models.Fazendas
     {
         public Fazenda(Guid clienteId,
                        string codigoFazenda,
-                       string codigoObjetoFazenda,
                        DateTime dataCriacaoFazenda,
                        string nome,
                        int quantidadeAnimais)
         {
             ClienteId = clienteId;
             CodigoFazenda = codigoFazenda;
-            CodigoObjetoFazenda = codigoObjetoFazenda;
             DataCriacaoFazenda = dataCriacaoFazenda;
             Nome = nome;
             QuantidadeAnimais = quantidadeAnimais;
@@ -26,8 +25,6 @@ namespace SubsistemaGerencialBackend.Models.Fazendas
 
         public string CodigoFazenda {  get; private set; }
 
-        public string CodigoObjetoFazenda { get; private set; }
-
         public DateTime DataCriacaoFazenda { get; private set; }
 
         public string Nome {  get; private set; }
@@ -37,5 +34,22 @@ namespace SubsistemaGerencialBackend.Models.Fazendas
         public virtual Cliente? Cliente { get; set; }
 
         public virtual ICollection<EnderecoFazenda>? EnderecoFazendas { get; set; }
+
+        public virtual ICollection<ClienteContrato>? ClienteContrato { get; set; }
+    }
+
+    public class FazendaDto
+    {
+        public Guid Id { get; set; }
+
+        public Guid ClienteId { get; set; }
+
+        public string CodigoFazenda { get; set; } = string.Empty;
+
+        public DateTime DataCriacaoFazenda { get; set; }
+
+        public string Nome { get; set; } = string.Empty;
+
+        public int QuantidadeAnimais { get; set; }
     }
 }
