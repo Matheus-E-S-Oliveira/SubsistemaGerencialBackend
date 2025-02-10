@@ -8,6 +8,11 @@ namespace SubsistemaGerencialBackend.Models.Clientes
 {
     public class Cliente : Base
     {
+        public Cliente() 
+        {
+            Nome = string.Empty;        
+        }
+
         public Cliente(string nome,
                        string? cpf,
                        SituacaoCliente situacao,

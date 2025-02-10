@@ -34,12 +34,15 @@ namespace SubsistemaGerencialBackend.Configuration.BoletosConfiguration
                 .IsRequired(false);
 
             builder.Property(x => x.ValorMora)
+                 .HasColumnType("decimal(10,2)")
                 .IsRequired(false);
 
             builder.Property(x => x.ValorDesconto)
+                 .HasColumnType("decimal(10,2)")
                 .IsRequired(false);
 
             builder.Property(x => x.ValorAcrescimos)
+                 .HasColumnType("decimal(10,2)")
                 .IsRequired(false);
 
             builder.Property(c => c.DataCriacao)

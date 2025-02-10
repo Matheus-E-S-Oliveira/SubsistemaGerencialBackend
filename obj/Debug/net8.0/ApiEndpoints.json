@@ -1,5 +1,51 @@
 [
   {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Boletos.Queries.Boleto",
+    "Method": "GetPaged",
+    "RelativePath": "api/boleto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "data",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Boletos.BoletoDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SubsistemaGerencialBackend.Endpoints.Clientes.Queries.ClienteController",
     "Method": "GetPaged",
     "RelativePath": "api/cliente",
@@ -123,6 +169,186 @@
     ]
   },
   {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetPaged",
+    "RelativePath": "api/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetClientesResumo",
+    "RelativePath": "api/dashboard/clientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.ClientesResumo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetConatrto",
+    "RelativePath": "api/dashboard/contrato",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.Contratos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetDadosDiversos",
+    "RelativePath": "api/dashboard/gerais",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.DadosDiversos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetLicencaResumo",
+    "RelativePath": "api/dashboard/licenca",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.LicencaResumo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "ObterDadosMensais",
+    "RelativePath": "api/dashboard/mensais",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.DadosMensais",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetFormasPagamentoResumo",
+    "RelativePath": "api/dashboard/pagamentos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.FormasPagamentoResumo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetPlanoResumo",
+    "RelativePath": "api/dashboard/plano",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.PlanoResumo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Dashboard.Queries.Dashboard",
+    "Method": "GetTotalLicencaAno",
+    "RelativePath": "api/dashboard/total",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Models.Dashboard.TotalAnoResumo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SubsistemaGerencialBackend.Endpoints.Fazendas.Queries.GetFazendas",
     "Method": "GetPaged",
     "RelativePath": "api/fazenda",
@@ -154,6 +380,42 @@
     "ReturnTypes": [
       {
         "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Fazendas.FazendaDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Fazendas.Queries.GetFazendas",
+    "Method": "GetPorId",
+    "RelativePath": "api/fazenda/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Fazendas.FazendaEnderecoDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

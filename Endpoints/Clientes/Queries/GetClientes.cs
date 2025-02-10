@@ -6,16 +6,9 @@ namespace SubsistemaGerencialBackend.Endpoints.Clientes.Queries
 {
     [ApiController]
     [Route("api/cliente")]
-    public class ClienteController : ControllerBase
+    public class ClienteController(AppDbContext context) : ControllerBase
     {
-        private readonly AppDbContext _context;
-        private readonly IClienteRepository _clienteRepository;
-
-        public ClienteController(AppDbContext context, IClienteRepository clienteRepository)
-        {
-            _context = context;
-            _clienteRepository = clienteRepository;
-        }
+        private readonly AppDbContext _context = context;
 
         [HttpGet]
         [ProducesResponseType(typeof(Pagedresult<ClienteDto>), 200)] // Adiciona detalhes de resposta para Swagger

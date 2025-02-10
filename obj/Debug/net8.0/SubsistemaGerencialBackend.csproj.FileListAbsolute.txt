@@ -125,3 +125,7 @@ E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\bin\Debug\
 E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\obj\Debug\net8.0\SubsistemaGerencialBackend.MvcApplicationPartsAssemblyInfo.cs
+E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\bin\Debug\net8.0\SubsistemaGerencialBackend.staticwebassets.endpoints.json
+E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\obj\Debug\net8.0\staticwebassets\msbuild.SubsistemaGerencialBackend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+E:\GitHub\RERUM\SubsistemaGerencialBackend\SubsistemaGerencialBackend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

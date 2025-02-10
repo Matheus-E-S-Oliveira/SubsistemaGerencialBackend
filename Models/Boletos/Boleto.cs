@@ -1,4 +1,6 @@
-﻿using SubsistemaGerencialBackend.Models.DeatlhesPagamentos;
+﻿using SubsistemaGerencialBackend.Enums.StatusPagamentos;
+using SubsistemaGerencialBackend.Models.DeatlhesPagamentos;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SubsistemaGerencialBackend.Models.Boletos
 {
@@ -31,26 +33,60 @@ namespace SubsistemaGerencialBackend.Models.Boletos
             ValorAcrescimos = valorAcrescimos;
         }
 
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
 
-        public Guid PagamentoId { get; private set; }
+        public Guid PagamentoId { get; set; }
 
-        public string NossoNumero { get; private set; }
+        public string NossoNumero { get; set; }
 
-        public string SeuNumero { get; private set; }
+        public string SeuNumero { get; set; }
 
-        public DateTime? DataEntrada { get; private set; }
+        public DateTime? DataEntrada { get; set; }
 
-        public DateTime? DataVencimento { get; private set; }
+        public DateTime? DataVencimento { get; set; }
 
-        public DateTime? DataLimitePagamento { get; private set; }
+        public DateTime? DataLimitePagamento { get; set; }
 
-        public decimal? ValorMora { get; private set; }
+        public decimal? ValorMora { get; set; }
 
-        public decimal? ValorDesconto { get; private set; }
+        public decimal? ValorDesconto { get; set; }
 
-        public decimal? ValorAcrescimos { get; private set; }
+        public decimal? ValorAcrescimos { get; set; }
 
+        [NotMapped]
         public virtual DetalhesPagamento? DetalherPagamento { get; set; }
+    }
+
+    public class BoletoDto
+    {
+        public Guid Id { get; set; }
+
+        public Guid PagamentoId { get; set; }
+
+        public string Nome { get; set; } = string.Empty;
+
+        public string? Cpf { get; set; } = string.Empty;
+
+        public string NossoNumero { get; set; } = string.Empty;
+
+        public string SeuNumero { get; set; } = string.Empty;
+
+        public DateTime? DataEntrada { get; set; }
+
+        public DateTime? DataVencimento { get; set; }
+
+        public DateTime? DataLimitePagamento { get; set; }
+
+        public decimal? ValorMora { get; set; }
+
+        public decimal? ValorDesconto { get; set; }
+
+        public decimal? ValorAcrescimos { get; set; }
+
+        public decimal? Valor { get; set; }
+
+        public decimal? ValorCobrado { get; set; }
+
+        public StatusPagamento StatusPagamento { get; set; }
     }
 }

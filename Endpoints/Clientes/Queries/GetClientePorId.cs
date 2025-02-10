@@ -37,13 +37,12 @@ namespace SubsistemaGerencialBackend.Endpoints.Clientes.Queries
                     Email = cliente.Email,
                     Telefone = cliente.Telefone,
 
-                    // Mapeamento de Endereços
-                    Enderecos = _context.EnderecoClientes
-                        .Where(e => e.ClienteId == cliente.Id)
+                    // Mapeamento de Endereços diretamente no Select
+                    Enderecos = cliente.EnderecosCliente!
                         .Select(e => new EnderecoClienteDto
                         {
                             EnderecoId = e.Id,
-                            Uf = e.Uf,
+                            Uf = e.Uf, 
                             Cidade = e.Cidade,
                             Cep = e.Cep,
                             Rua = e.Rua,
@@ -53,9 +52,8 @@ namespace SubsistemaGerencialBackend.Endpoints.Clientes.Queries
                         })
                         .ToList(),
 
-                    // Mapeamento de Fazendas
-                    Fazendas = _context.Fazendas
-                        .Where(f => f.ClienteId == cliente.Id)
+                    // Mapeamento de Fazendas diretamente no Select
+                    Fazendas = cliente.Fazendas!
                         .Select(f => new FazendaDto
                         {
                             Id = f.Id,
@@ -67,6 +65,7 @@ namespace SubsistemaGerencialBackend.Endpoints.Clientes.Queries
                         .OrderBy(x => x.DataCriacaoFazenda)
                         .ToList()
                 });
+
 
             var pagedResult = await Pagedresult<ClienteComEnderecoDto>.ToPagedResultAsync(query, pageNumber, pageSize);
 

@@ -12,6 +12,7 @@ using SubsistemaGerencialBackend.Models.Auditorias;
 using SubsistemaGerencialBackend.Models.Boletos;
 using SubsistemaGerencialBackend.Models.ClienteContratos;
 using SubsistemaGerencialBackend.Models.Clientes;
+using SubsistemaGerencialBackend.Models.Dashboard;
 using SubsistemaGerencialBackend.Models.DeatlhesPagamentos;
 using SubsistemaGerencialBackend.Models.EnderecoClientes;
 using SubsistemaGerencialBackend.Models.EnderecoFazendas;
@@ -47,6 +48,8 @@ namespace SubsistemaGerencialBackend.AppDbContexts
         public DbSet<DetalhesPagamento> DetalhesPagamentos { get; set; }
 
         public DbSet<Boleto> Boletos { get; set; }
+
+        public DbSet<DadosGeraisEntity> DadosGeraisEntities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

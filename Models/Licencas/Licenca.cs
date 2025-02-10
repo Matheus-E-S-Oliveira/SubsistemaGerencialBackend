@@ -7,6 +7,11 @@ namespace SubsistemaGerencialBackend.Models.Licencas
 {
     public class Licenca : Base
     {
+        public Licenca() 
+        {
+            Reference = string.Empty;
+        }
+
         public Licenca(Guid clienteId,
                        DateTime? dataInico,
                        DateTime? dataVencimento,
@@ -24,21 +29,21 @@ namespace SubsistemaGerencialBackend.Models.Licencas
             FaturaGerada = faturaGerada;
         }
 
-        public Guid Id { get; private set; }
+        public Guid Id { get;  set; }
 
-        public Guid ClienteId { get; private set; }
+        public Guid ClienteId { get; set; }
 
-        public DateTime? DataInico { get; private set; }
+        public DateTime? DataInico { get; set; }
 
-        public DateTime? DataVencimento { get; private set; }
+        public DateTime? DataVencimento { get; set; }
 
-        public string Reference { get; private set; }
+        public string Reference { get; set; }
 
-        public Plano Plano { get; private set; }
+        public Plano Plano { get; set; }
 
-        public StatusLicenca StatusLicenca { get; private set; }
+        public StatusLicenca StatusLicenca { get; set; }
 
-        public bool FaturaGerada { get; private set; }
+        public bool FaturaGerada { get; set; }
 
         public virtual Cliente? Cliente { get; set; }
 

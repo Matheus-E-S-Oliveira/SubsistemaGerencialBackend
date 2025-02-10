@@ -1,4 +1,5 @@
 ﻿using SubsistemaGerencialBackend.Models.Fazendas;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SubsistemaGerencialBackend.Models.EnderecoFazendas
 {
@@ -69,6 +70,42 @@ namespace SubsistemaGerencialBackend.Models.EnderecoFazendas
 
         public string? FaturaComplemento { get; private set; }
 
+        [NotMapped]
         public virtual Fazenda? Fazenda { get; set; }
+    }
+
+    public class EndereçoDto
+    {
+        public Guid Id { get; set; }
+
+        public Guid FazendaId { get; set; }
+
+        public string? ComercialUf { get; set; }
+
+        public string? ComercialCidade { get; set; }
+
+        public string? ComercialCep { get; set; }
+
+        public string? ComercialRua { get; set; }
+
+        public string? ComercialBairro { get; set; }
+
+        public string? ComercialNumero { get; set; }
+
+        public string? ComercialComplemento { get; set; }
+
+        public string? FaturaUf { get; set; }
+
+        public string? FaturaCidade { get; set; }
+
+        public string? FaturaCep { get; set; }
+
+        public string? FaturaRua { get; set; }
+
+        public string? FaturaBairro { get; set; }
+
+        public string? FaturaNumero { get; set; }
+
+        public string? FaturaComplemento { get; set; }
     }
 }

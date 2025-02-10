@@ -22,9 +22,11 @@ namespace SubsistemaGerencialBackend.Configuration.DetalhesPagamentosConfigurati
                 .IsRequired();
 
             builder.Property(c => c.Valor)
+                .HasColumnType("decimal(10,2)")
                 .IsRequired(false);
 
             builder.Property(c => c.ValorCobrado)
+                .HasColumnType("decimal(10,2)")
                 .IsRequired(false);
 
             builder.Property(c => c.DataLiquidacao)

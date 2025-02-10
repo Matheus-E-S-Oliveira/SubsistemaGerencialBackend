@@ -23,19 +23,19 @@ namespace SubsistemaGerencialBackend.Models.DeatlhesPagamentos
             StatusPagamento = statusPagamento;
         }
 
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
 
-        public Guid LicencaId { get; private set; }
+        public Guid LicencaId { get; set; }
 
-        public FormaPagamento FormaPagamneto { get; private set; }
+        public FormaPagamento FormaPagamneto { get; set; }
 
-        public decimal? Valor {  get; private set; }
+        public decimal? Valor {  get; set; }
 
-        public decimal? ValorCobrado { get; private set; }
+        public decimal? ValorCobrado { get; set; }
 
-        public DateTime? DataLiquidacao { get; private set; }
+        public DateTime? DataLiquidacao { get; set; }
 
-        public StatusPagamento StatusPagamento { get; private set; }
+        public StatusPagamento StatusPagamento { get; set; }
 
         public virtual Licenca? Licenca { get; set; }
 

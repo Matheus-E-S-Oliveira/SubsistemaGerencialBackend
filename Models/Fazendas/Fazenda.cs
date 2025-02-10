@@ -52,4 +52,23 @@ namespace SubsistemaGerencialBackend.Models.Fazendas
 
         public int QuantidadeAnimais { get; set; }
     }
+
+    public class FazendaEnderecoDto
+    {
+        public Guid Id { get; set; }
+
+        public Guid ClienteId { get; set; }
+
+        public string Nome { get; set; } = string.Empty;
+
+        public string NomeCliente { get; set; } = string.Empty;
+        
+        public string CodigoFazenda { get; set; } = string.Empty;
+
+        public DateTime DataCriacaoFazenda { get; set; }
+
+        public int QuantidadeAnimais { get; set; }
+
+        public List<EnderecoFazenda> EnderecoFazendas { get; set; } = new List<EnderecoFazenda>();
+    }
 }

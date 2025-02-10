@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubsistemaGerencialBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f2f92854fabcb539192c3b89955f5743082eb57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfd91be292fdf9e31c958d0988f6e25c3762b3be")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubsistemaGerencialBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubsistemaGerencialBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

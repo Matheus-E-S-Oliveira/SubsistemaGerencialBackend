@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "E:\\GitHub\\RERUM\\SubsistemaGerencialBackend\\SubsistemaGerencialBackend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SubsistemaGerencialBackend.bundle.scp.css",
-      "PackagePath": "staticwebassets\\SubsistemaGerencialBackend.bundle.scp.css"
+      "PackagePath": "staticwebassets\\SubsistemaGerencialBackend.2049rzta00.bundle.scp.css"
     },
     {
       "Id": "E:\\GitHub\\RERUM\\SubsistemaGerencialBackend\\SubsistemaGerencialBackend\\wwwroot\\css\\site.css",
@@ -243,6 +243,10 @@
     {
       "Id": "E:\\GitHub\\RERUM\\SubsistemaGerencialBackend\\SubsistemaGerencialBackend\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SubsistemaGerencialBackend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SubsistemaGerencialBackend.Microsoft.AspNetCore.StaticWebAssets.props",
