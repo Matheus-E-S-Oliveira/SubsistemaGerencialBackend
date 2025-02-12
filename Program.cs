@@ -41,7 +41,9 @@ internal class Program
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
         });
 
+        builder.Services.AddScoped<IBoletoRepository, BoletoRepository>();
         builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+        builder.Services.AddScoped<ILicencaRepository, LicencaRepository>();
         builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 
         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;

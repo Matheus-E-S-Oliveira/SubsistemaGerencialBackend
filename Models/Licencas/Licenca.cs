@@ -49,4 +49,27 @@ namespace SubsistemaGerencialBackend.Models.Licencas
 
         public virtual DetalhesPagamento? DetalherPagamento { get; set; }
     }
+
+    public class LicencaDto
+    {
+        public Guid Id { get; set; }
+
+        public Guid ClienteId { get; set; }
+
+        public string NomeCliente { get; set; } = string.Empty;
+
+        public string CpfCliente { get; set; } = string.Empty;
+
+        public DateTime? DataInico { get; set; }
+
+        public DateTime? DataVencimento { get; set; }
+
+        public string Reference { get; set; } = string.Empty;
+
+        public Plano Plano { get; set; }
+
+        public StatusLicenca StatusLicenca { get; set; }
+
+        public bool FaturaGerada { get; set; }
+    }
 }

@@ -46,6 +46,88 @@
     ]
   },
   {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Boletos.Queries.Boleto",
+    "Method": "GetBoletosVencendo",
+    "RelativePath": "api/boleto/vencendo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Boletos.BoletoDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Boletos.Queries.Boleto",
+    "Method": "GetBoletosVencidos",
+    "RelativePath": "api/boleto/vencidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Boletos.BoletoDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SubsistemaGerencialBackend.Endpoints.Clientes.Queries.ClienteController",
     "Method": "GetPaged",
     "RelativePath": "api/cliente",
@@ -416,6 +498,88 @@
     "ReturnTypes": [
       {
         "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Fazendas.FazendaEnderecoDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Licencas.Queries.Licencas",
+    "Method": "GetPagedVencendo",
+    "RelativePath": "api/licenca/vencendo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nomeCliente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cpfCliente",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Licencas.LicencaDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubsistemaGerencialBackend.Endpoints.Licencas.Queries.Licencas",
+    "Method": "GetPagedVencido",
+    "RelativePath": "api/licenca/vencidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nomeCliente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cpfCliente",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubsistemaGerencialBackend.Endpoints.Pagedresult\u00601[[SubsistemaGerencialBackend.Models.Licencas.LicencaDto, SubsistemaGerencialBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

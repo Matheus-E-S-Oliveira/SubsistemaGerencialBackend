@@ -367,29 +367,29 @@ namespace SubsistemaGerencialBackend.Models.Dashboard
             {
                 BoletosEmitidosEsteMes = await context.Boletos
                     .Where(b => b.DataEntrada.HasValue &&
-                    b.DataEntrada.Value.Month == DateTime.Now.Month &&
-                    b.DataEntrada.Value.Year == DateTime.Now.Year)
+                    (b.DataEntrada.Value.Month == DateTime.Now.Month) &&
+                    (b.DataEntrada.Value.Year == DateTime.Now.Year))
                     .CountAsync(),
                 FaturaPertoDoVencimento = await context.Boletos
                     .Where(b => b.DataVencimento.HasValue &&
-                    b.DataVencimento >= hoje &&
-                    b.DataVencimento < hoje.AddDays(30))
+                    (b.DataVencimento >= hoje) &&
+                    (b.DataVencimento < hoje.AddDays(30)))
                     .CountAsync(),
                 FaturaVencidas = await context.Boletos
                     .Where(b => b.DataVencimento.HasValue &&
-                    b.DataVencimento >= hoje.AddDays(-30) &&
-                    b.DataVencimento < hoje)
+                    (b.DataVencimento >= hoje.AddDays(-90)) &&
+                    (b.DataVencimento < hoje))
                     .CountAsync(),
                 LicencaVencida = await context.Licencas
                     .Where(l => l.DataVencimento.HasValue &&
-                    l.DataVencimento >= hoje.AddDays(-30) &&
-                    l.DataVencimento < hoje)
+                    (l.DataVencimento >= hoje.AddDays(-90)) &&
+                    (l.DataVencimento < hoje))
                     .CountAsync(),
 
                 LicencaPertoDeVencer = await context.Licencas
                     .Where(l => l.DataVencimento.HasValue &&
-                    l.DataVencimento >= hoje &&
-                    l.DataVencimento < hoje.AddDays(30))
+                    (l.DataVencimento >= hoje) &&
+                    (l.DataVencimento < hoje.AddDays(30)))
                     .CountAsync(),
             };
 
